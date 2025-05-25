@@ -96,10 +96,11 @@ export default function Profile() {
           <div className="flex items-center gap-6">
             <div className="relative w-24 h-24 rounded-full overflow-hidden">
               <Image
-                src={profile.avatar_url}
+                src={profile.avatar_url || "/avatar-placeholder.png"}
                 alt={profile.full_name || user.email}
                 fill
                 className="object-cover"
+                quality={90}
               />
             </div>
             <div>
@@ -201,10 +202,11 @@ export default function Profile() {
                     <div key={auction.id} className="bg-white rounded-lg shadow-lg overflow-hidden">
                       <div className="relative h-48">
                         <Image
-                          src={auction.image_url}
+                          src={auction.image_url || "/placeholder.jpg"}
                           alt={auction.title}
                           fill
                           className="object-cover"
+                          quality={90}
                         />
                         <div className="absolute top-2 right-2 bg-[#7a2c1b] text-white px-3 py-1 rounded-full text-sm">
                           {auction.bids.length} pujas
@@ -237,10 +239,11 @@ export default function Profile() {
                         <div key={auction.id} className="bg-white rounded-lg shadow-lg overflow-hidden">
                           <div className="relative h-48">
                             <Image
-                              src={auction.image_url}
+                              src={auction.image_url || "/placeholder.jpg"}
                               alt={auction.title}
                               fill
                               className="object-cover"
+                              quality={90}
                             />
                             <div className="absolute top-2 right-2 bg-gray-500 text-white px-3 py-1 rounded-full text-sm">
                               Borrador
@@ -274,10 +277,11 @@ export default function Profile() {
                         <div className="flex items-center gap-4">
                           <div className="relative w-16 h-16 rounded-lg overflow-hidden">
                             <Image
-                              src={bid.auction.image_url}
+                              src={bid.auction.image_url || "/placeholder.jpg"}
                               alt={bid.auction.title}
                               fill
                               className="object-cover"
+                              quality={90}
                             />
                           </div>
                           <div>
@@ -305,10 +309,11 @@ export default function Profile() {
                     <div key={fav.id} className="bg-white rounded-lg shadow-lg overflow-hidden">
                       <div className="relative h-48">
                         <Image
-                          src={fav.auction.image_url}
+                          src={fav.auction.image_url || "/placeholder.jpg"}
                           alt={fav.auction.title}
                           fill
                           className="object-cover"
+                          quality={90}
                         />
                         <button className="absolute top-2 right-2 bg-white p-2 rounded-full shadow hover:bg-gray-100 transition">
                           <Heart className="w-5 h-5 text-red-500 fill-current" />

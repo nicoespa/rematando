@@ -41,11 +41,12 @@ export default function Navbar() {
           </Link>
         </div>
         <div className="flex-1 flex justify-center">
-          <input
-            type="text"
-            placeholder="Buscar subastas, productos, usuarios..."
-            className="w-full max-w-lg px-4 py-2 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#7a2c1b] bg-white text-gray-800 shadow-sm transition"
-          />
+          <nav className="flex gap-6 text-base font-medium text-[#7a2c1b]">
+            <Link href="/auctions?category=inmuebles" className="hover:text-[#a9442a] transition">Inmuebles</Link>
+            <Link href="/auctions?category=autos" className="hover:text-[#a9442a] transition">Autos</Link>
+            <Link href="/auctions?category=coleccionables" className="hover:text-[#a9442a] transition">Coleccionables</Link>
+            <Link href="/auctions?category=destacados" className="hover:text-[#a9442a] transition">Destacados</Link>
+          </nav>
         </div>
         <div className="flex items-center gap-4">
           {!user && (

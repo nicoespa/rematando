@@ -205,10 +205,11 @@ export default function AuctionsList() {
               >
                 <div className="relative h-48">
                   <Image
-                    src={auction.image_url}
+                    src={auction.image_url || "/placeholder.jpg"}
                     alt={auction.title}
                     fill
                     className="object-cover"
+                    quality={90}
                   />
                   <div className="absolute top-2 right-2 bg-[#7a2c1b] text-white px-3 py-1 rounded-full text-sm">
                     {auction.bids?.length || 0} pujas

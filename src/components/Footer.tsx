@@ -16,7 +16,7 @@ export default function Footer() {
           <Link href="/profile" className="hover:text-primary-600">Mi perfil</Link>
           <Link href="/about" className="hover:text-primary-600">Sobre nosotros</Link>
         </div>
-        <div className="text-xs text-gray-400">Hecho con ❤️ en Argentina</div>
+        <div className="text-xs text-gray-400">2025</div>
       </div>
     </footer>
   );

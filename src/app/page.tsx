@@ -33,11 +33,12 @@ export default async function Home() {
       {featuredAuction && (
         <section className="relative h-[480px] md:h-[600px] w-full flex items-center justify-center overflow-hidden">
           <Image
-            src={featuredAuction.image_url}
+            src={featuredAuction.image_url || "/placeholder.jpg"}
             alt={featuredAuction.title}
             fill
             className="object-cover object-center brightness-75"
             priority
+            quality={90}
           />
           <div className="absolute inset-0 bg-black/40" />
           <div className="relative z-10 text-center text-white max-w-2xl mx-auto">
@@ -70,10 +71,11 @@ export default async function Home() {
               >
                 <div className="relative w-full h-28 md:h-32">
                   <Image
-                    src={category.image_url}
+                    src={category.image_url || "/placeholder.jpg"}
                     alt={category.name}
                     fill
                     className="object-cover object-center group-hover:scale-105 transition-transform"
+                    quality={90}
                   />
                 </div>
                 <div className="p-3 text-center">
@@ -99,10 +101,11 @@ export default async function Home() {
               >
                 <div className="relative h-56">
                   <Image
-                    src={auction.image_url}
+                    src={auction.image_url || "/placeholder.jpg"}
                     alt={auction.title}
                     fill
                     className="object-cover object-center"
+                    quality={90}
                   />
                   <div className="absolute top-2 right-2 bg-[#7a2c1b] text-white px-3 py-1 rounded-full text-sm shadow">
                     {auction.bids?.length || 0} pujas
